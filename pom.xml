@@ -76,6 +76,7 @@
 			<artifactId>commons-codec</artifactId>
 			<version>1.15</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -90,6 +91,13 @@
 							<artifactId>lombok</artifactId>
 						</path>
 					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.tudor.salon.SalonApplication</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>

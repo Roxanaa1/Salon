@@ -1,8 +1,6 @@
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY pom.xml .
-COPY .mvn .mvn
-COPY mvnw .
+COPY . .
 RUN chmod +x ./mvnw
 RUN ./mvnw clean install -DskipTests
 EXPOSE 8080
