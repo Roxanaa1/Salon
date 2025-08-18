@@ -5,7 +5,6 @@ COPY mvnw .
 COPY mvnw.cmd .
 COPY pom.xml .
 RUN chmod +x ./mvnw
-RUN ./mvnw dependency:go-offline
 COPY . .
 RUN ./mvnw clean install -DskipTests
 EXPOSE 8080
