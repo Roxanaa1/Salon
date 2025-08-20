@@ -33,8 +33,7 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody @Validated(LoginValidation.class) UserDto userDto) {
-        User userToLogin = UserMapper.toEntity(userDto);
-        User user = userService.login(userToLogin.getEmail(), userToLogin.getPassword());
+        User user = userService.login(userDto.getEmail(), userDto.getPassword());
         return ResponseEntity.ok(UserMapper.toDto(user));
     }
 }
